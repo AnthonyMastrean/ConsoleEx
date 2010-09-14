@@ -23,8 +23,7 @@ namespace Microsoft.GotDotNet
 	/// found in KnowledgeBase articles Q319883 and Q319257.
 	/// </remarks>
 	public class ConsoleEx
-	{	
-
+	{
 		#region API and Structure Declarations
 
 		// Standard structures used for interop with kernel32
@@ -128,7 +127,6 @@ namespace Microsoft.GotDotNet
 
 		#endregion
 
-
 		// Const variables
 		private const int  INVALID_HANDLE_VALUE    = -1;
 		private const int  STD_INPUT_HANDLE        = -10;
@@ -144,8 +142,6 @@ namespace Microsoft.GotDotNet
 		private static int OriginalConsolePen;
 		private static int CurrentConsolePen;
 
-		
-		// Constructors
 		static ConsoleEx()
 		{
 			// Grab input and output buffer handles
@@ -166,11 +162,10 @@ namespace Microsoft.GotDotNet
 				(int) OutputModeFlags.ENABLE_PROCESSED_OUTPUT);
 		}
 
-		private ConsoleEx() : base()
+		private ConsoleEx()
 		{
 			throw new NotSupportedException("This object may not be instantiated. Use static methods instead.");
 		}
-
 
 		/// <summary>
 		/// Sets or gets the console window title.
@@ -233,7 +228,6 @@ namespace Microsoft.GotDotNet
 			}
 		}
 
-
 		/// <summary>
 		/// Gets or sets the visibility of the cursor.
 		/// </summary>
@@ -256,7 +250,6 @@ namespace Microsoft.GotDotNet
 				SetConsoleCursorInfo(hConsoleOutput, ref ConsoleCursorInfo);
 			}
 		}
-
 
 		/// <summary>
 		/// Gets or sets the height of the cursor, as a percentage of the overall character cell.
@@ -291,7 +284,6 @@ namespace Microsoft.GotDotNet
 			}
 		}
 
-
 		/// <summary>
 		/// Sets the console pen color to that specified.
 		/// </summary>
@@ -305,7 +297,6 @@ namespace Microsoft.GotDotNet
 			SetConsoleTextAttribute(hConsoleOutput, CurrentConsolePen);
 		}
 	
-
 		/// <summary>
 		/// Resets the console pen color to the original default at the time 
 		/// the class was originally initialised.
@@ -314,7 +305,6 @@ namespace Microsoft.GotDotNet
 		{
 			SetConsoleTextAttribute(hConsoleOutput, OriginalConsolePen);
 		}
-	
 
 		/// <summary>
 		/// Clears screen.
@@ -343,7 +333,6 @@ namespace Microsoft.GotDotNet
 			SetConsoleCursorPosition(hConsoleOutput, Home);
 		}
 
-
 		/// <summary>
 		/// Moves the console cursor to the specified location on the screen.
 		/// </summary>
@@ -370,7 +359,6 @@ namespace Microsoft.GotDotNet
 			SetConsoleCursorPosition(hConsoleOutput, cursorLocation);
 		}
 
-
 		/// <summary>
 		/// Writes the specified text at the given location.
 		/// </summary>
@@ -388,7 +376,6 @@ namespace Microsoft.GotDotNet
 			Move(x, y);
 			Console.Write(text);
 		}
-
 
 		/// <summary>
 		/// Draws a rectangle on the console window using either 7-bit ASCII characters or
@@ -467,7 +454,6 @@ namespace Microsoft.GotDotNet
 			}
 		}
 
-		
 		/// <summary>
 		/// Read a single character from the input buffer. Unlike Console.Read(), which 
 		/// only reads from the buffer when the read operation has terminated (e.g. by
@@ -498,8 +484,8 @@ namespace Microsoft.GotDotNet
 			
 			if (success)
 				return Convert.ToChar(buf[0]);
-			else 
-				throw new ApplicationException("Attempt to call ReadConsole API failed.");
+		
+			throw new ApplicationException("Attempt to call ReadConsole API failed.");
 		}
 	}
 }
