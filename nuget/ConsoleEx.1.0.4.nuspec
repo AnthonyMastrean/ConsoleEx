@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ConsoleEx</id>
+    <version>1.0.4</version>
+    <title>ConsoleEx</title>
+    <authors>Tim Sneath</authors>
+    <owners>Tim Sneath</owners>
+    <projectUrl>https://github.com/AnthonyMastrean/ConsoleEx</projectUrl>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/ConsoleEx/master/ConsoleEx.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This class is a helper class that provides supplemental functionality to that available in the System.Console class.</description>
+    <summary>Visual Studio .NET allows you to write console applications, but the built-in class provides limited functionality for controlling the screen and cursor. For more sophisticated access, it is necessary</summary>
+    <language />
+    <tags>Console</tags>
+  </metadata>
+  <files>
+    <file src="lib\ConsoleEx.dll" target="lib\ConsoleEx.dll" />
+  </files>
+</package>
