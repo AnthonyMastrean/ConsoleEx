@@ -1,5 +1,5 @@
-ConsoleEx 1.03
-~~~~~~~~~~~~~~
+ConsoleEx 1.0.4
+~~~~~~~~~~~~~~~
 
 Written by Tim Sneath <tims@microsoft.com>
 
@@ -26,6 +26,9 @@ I'm interested in your comments and suggestions for improvement. Please email me
 
 Change Log
 ==========
+v1.0.4 - We're going with Semantic Versioning now!
+       - And publishing a Nuget package
+
 v1.03 - Set and obtain current cursor location
       - Minor bug fix
 
